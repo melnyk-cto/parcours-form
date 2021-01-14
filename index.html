@@ -12,7 +12,7 @@
     <section class="parcours">
         <div class="parcours-sidebar">
             <div class="sidebar-title">
-                <h4>Votre demande de Prime Effy en moins de 2 minutes</h4>
+                <h5>Votre demande de Prime Effy en moins de 2 minutes</h5>
                 <span></span>
             </div>
             <div class="sidebar-status">
@@ -35,14 +35,16 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/house.svg" alt="">
                                 <p>Une maison</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/apartment.svg" alt="">
                                 <p>Un appartement</p>
                             </label>
@@ -56,14 +58,16 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/no.svg" alt="">
                                 <p>Non</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/yes.svg" alt="">
                                 <p>Oui</p>
                             </label>
@@ -71,14 +75,93 @@
                     </div>
                 </div>
                 <div id='step-3' class="question step-two">
-                    <div class='title'>
-                        <h2>Quelle est la surface habitable de votre logement ?</h2>
+                    <div class='help'>
+                        <div class='title'>
+                            <div class='title-image'>
+                                <img src='images/circle-warning.svg' alt=''>
+                            </div>
+                            <h2>Votre projet n'est pas éligible à la prime Effy !</h2>
+                            <h5>Cette offre n'est pas éligible aux logements récents (construits depuis moins de 2 ans)</h5>
+                            <h2>D'autres aides existent pour vos travaux</h2>
+                        </div>
+                        <div class='help-inner'>
+                            <div class='help-image'>
+                                <img src='images/step-two-image.svg' alt=''>
+                            </div>
+                            <div class='help-description'>
+                                <h2>Calculez les aides auxquelles vous avez droit grâce à notre simulateur</h2>
+                                <p>
+                                    De nombreuses aides existent pour vous accompagner dans vos travaux de rénovation énergétique telles que :
+                                    <br>
+                                    Prime Renov’, Crédit d’impôt, aides de l’Ana, Eco-Prêt à Taux Zéro, aides locales…
+                                </p>
+                                <button class='btn' type='button'>CALCULER MES AIDES</button>
+                                <p>Gratuit et sans engagement</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="answers">
-                        <label>
-                            <input type="number">
-                            Surface en m²
-                        </label>
+                    <div class='reviews'>
+                        <h2>Nos clients parlent de nous</h2>
+                        <div class='reviews-inner'>
+                            <div class='reviews-item'>
+                                <div class='item-rating'>
+                                    <div class='rating-icons'>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                    </div>
+                                    <div class='rating-data'>
+                                        <span>Le 10/01/2021</span>
+                                    </div>
+                                </div>
+                                <h3>Marie-José D.</h3>
+                                <p>
+                                    « Rien à dire tout a été parfait depuis le début, explications claires du chantier
+                                    jusqu’aux travaux exécutés avec confiance professionnelle et propreté du chantier à
+                                    la fin des travaux MERCI , à recommander »
+                                </p>
+                            </div>
+                            <div class='reviews-item'>
+                                <div class='item-rating'>
+                                    <div class='rating-icons'>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                    </div>
+                                    <div class='rating-data'>
+                                        <span>Le 10/01/2021</span>
+                                    </div>
+                                </div>
+                                <h3>Jean-Claude D.</h3>
+                                <p>
+                                    « Tres bonne entreprise serieuse ouvrier discret avec tres bon travail et finition correct »
+                                </p>
+                            </div>
+                            <div class='reviews-item'>
+                                <div class='item-rating'>
+                                    <div class='rating-icons'>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                    </div>
+                                    <div class='rating-data'>
+                                        <span>Le 10/01/2021</span>
+                                    </div>
+                                </div>
+                                <h3>Nicolas S.</h3>
+                                <p>
+                                    « Rapide, efficace, vous vous occupés de rien , les intervenants sont des PROS ,
+                                    j’en suis contant leurs prestations a été ponctuelle, propre, j’espère avec le temps
+                                    voir l’amélioration de mon isolation, je recommande vivement »
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id='step-4' class="question step-three">
@@ -95,103 +178,115 @@
                 <div id='step-5' class="question step-four">
                     <div class='title'>
                         <h2>Quelle est l’énergie de chauffage actuelle de votre logement ?</h2>
-                        <h4>Si vous avez plusieurs énergies de chauffage, indiquez-nous la principale</h4>
+                        <h5>Si vous avez plusieurs énergies de chauffage, indiquez-nous la principale</h5>
                     </div>
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/oil.svg" alt="">
                                 <p>Chauffage au Fioul</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/lightning.svg" alt="">
                                 <p>Chauffage Électrique</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/gas.svg" alt="">
                                 <p>Chauffage au Gaz</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label for=>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/fire.svg" alt="">
                                 <p>Chauffage au Bois</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label for=>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/pump.svg" alt="">
                                 <p>Pompe à Chaleur</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label for=>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/coal.svg" alt="">
                                 <p>Chauffage au Charbon</p>
                             </label>
                         </div>
                     </div>
                 </div>
-                <div id='step-6' class="question step-five">
+                <div id='step-6' class="question step-ten step-five">
                     <div class='title'>
                         <h2>Quel type d'équipement au fioul est installé ?</h2>
                     </div>
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/oil-condensing-boiler.svg" alt="">
                                 <p>Chaudière à condensation</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/oil-boiler.svg" alt="">
                                 <p>Chaudière autre qu’à condensation</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/oil-plate.svg" alt="">
                                 <p>Poêle</p>
                             </label>
                         </div>
                     </div>
                 </div>
-                <div id='step-7' class="question step-five step-six">
+                <div id='step-7' class="question step-ten step-five step-six">
                     <div class='title'>
                         <h2>Quel type d'équipement au fioul est installé ?</h2>
                     </div>
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/electric-boiler.svg" alt="">
                                 <p>Chaudière électrique</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/heating.svg" alt="">
                                 <p>Plafonds ou planchers chauffants</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/electric-heaters.svg" alt="">
                                 <p>Radiateurs électriques</p>
                             </label>
@@ -205,28 +300,32 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/gas-condensing-boiler.svg" alt="">
                                 <p>Chaudière à condensation</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/gas-boiler.svg" alt="">
                                 <p>Chaudière autre qu’à condensation</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/gas-heater.svg" alt="">
                                 <p>Radiateur au gaz</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/gas-stove.svg" alt="">
                                 <p>Poêle au gaz</p>
                             </label>
@@ -238,39 +337,44 @@
                         <h2>Quels travaux souhaitez-vous réaliser dans votre logement ?</h2>
                     </div>
                     <div class="answers">
-                        <h3>Isolation</h3>
+                        <h4>Isolation</h4>
                         <div class='answers-inner'>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/roof-insulation.svg" alt="">
                                     <p>Isolation des Combles</p>
                                 </label>
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/wall-insulation.svg" alt="">
                                     <p>Isolations des Murs</p>
                                 </label>
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/floor-insulation.svg" alt="">
                                     <p>Isolation du Sol</p>
                                 </label>
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/windows.svg" alt="">
                                     <p>Fenêtres</p>
                                 </label>
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/roof-terrace-insulation.svg" alt="">
                                     <p>Isolation d’une Toiture-Terrasse</p>
                                 </label>
@@ -278,32 +382,36 @@
                         </div>
                     </div>
                     <div class="answers">
-                        <h3>Pompe à Chaleur</h3>
+                        <h4>Pompe à Chaleur</h4>
                         <div class='answers-inner'>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/heat-pump-1.svg" alt="">
                                     <p>Pompe à Chaleur Air/Eaus</p>
                                 </label>
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/heat-pump-2.svg" alt="">
                                     <p>Pompe à Chaleur Géothermique</p>
                                 </label>
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/heart-pump-3.svg" alt="">
                                     <p>Pompe à Chaleur Air/Air</p>
                                 </label>
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/heart-pump-4.svg" alt="">
                                     <p>Pompe à Chaleur Hybride</p>
                                 </label>
@@ -311,25 +419,28 @@
                         </div>
                     </div>
                     <div class="answers">
-                        <h3>Chauffage Traditionnel</h3>
+                        <h4>Chauffage Traditionnel</h4>
                         <div class='answers-inner'>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/oil-condensing-boiler.svg" alt="">
                                     <p>Chaudière fioul à condensation</p>
                                 </label>
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/gas-condensing-boiler.svg" alt="">
                                     <p>Chaudière gaz à condensation</p>
                                 </label>
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/electric-radiator.svg" alt="">
                                     <p>Radiateur électrique à régulation électronique</p>
                                 </label>
@@ -337,25 +448,28 @@
                         </div>
                     </div>
                     <div class="answers">
-                        <h3>Chauffage Bois</h3>
+                        <h4>Chauffage Bois</h4>
                         <div class='answers-inner'>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/wood-boiler.svg" alt="">
                                     <p>Chaudière à bois</p>
                                 </label>
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/fireplace-insert.svg" alt="">
                                     <p>Insert cheminée</p>
                                 </label>
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/wood-stove.svg" alt="">
                                     <p>Poêle à bois (granulés ou bûches)</p>
                                 </label>
@@ -363,18 +477,20 @@
                         </div>
                     </div>
                     <div class="answers">
-                        <h3>Solaire</h3>
+                        <h4>Solaire</h4>
                         <div class='answers-inner'>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/solar-panels.svg" alt="">
                                     <p>Panneaux Solaires Photovoltaïques</p>
                                 </label>
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/solar-system.svg" alt="">
                                     <p>Système Solaire Combiné</p>
                                 </label>
@@ -382,18 +498,20 @@
                         </div>
                     </div>
                     <div class="answers">
-                        <h3>Chauffe-Eau</h3>
+                        <h4>Chauffe-Eau</h4>
                         <div class='answers-inner'>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/water-heater.svg" alt="">
                                     <p>Chauffe-eau Thermodynamique</p>
                                 </label>
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="checkbox">
+                                    <input type="radio">
+                                    <span></span>
                                     <img src="images/solar-water-heater.svg" alt="">
                                     <p>Chauffe-eau Solaire Individuel</p>
                                 </label>
@@ -408,14 +526,16 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/lost-attics.svg" alt="">
                                 <p>Des combles perdus</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/converted-attic.svg" alt="">
                                 <p>Des combles aménagés</p>
                             </label>
@@ -429,21 +549,24 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/internal-insulation.svg" alt="">
                                 <p>Isolation intérieure</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/external-insulation.svg" alt="">
                                 <p>Isolation extérieure</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/question-mark.svg" alt="">
                                 <p>Je ne sais pas</p>
                             </label>
@@ -457,28 +580,32 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/cave.svg" alt="">
                                 <p>Une cave</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/median.svg" alt="">
                                 <p>Un terre-plein</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/crawl-space.svg" alt="">
                                 <p>Un vide sanitaire</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/garage.svg" alt="">
                                 <p>Un garage</p>
                             </label>
@@ -501,13 +628,15 @@
                         </button>
                     </div>
                 </div>
-                <div id='step-14' class="question step-thirteen">
+                <div id='step-14' class="question step-three step-thirteen">
                     <div class='title'>
                         <h2>Quelle est la surface de combles à isoler ?</h2>
                     </div>
                     <div class="answers">
-                        <label for="num2">Surface à isoler en m²</label>
-                        <input type="number" id='num2'>
+                        <label>
+                            Surface à isoler en m²
+                            <input type="number">
+                        </label>
                     </div>
                 </div>
                 <div id='step-15' class="question step-seven step-fourteen">
@@ -517,35 +646,39 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/basse-température.svg" alt="">
                                 <p>Basse température</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/moyenne-température.svg" alt="">
                                 <p>Moyenne température</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/haute-température.svg" alt="">
                                 <p>Haute température</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/question-mark.svg" alt="">
                                 <p>Je ne sais pas</p>
                             </label>
                         </div>
                     </div>
                 </div>
-                <div id='step-16' class="question step-thirteen step-fiveteen">
+                <div id='step-16' class="question step-three step-fiveteen">
                     <div class='title'>
                         <h2>Quelle est la surface de panneaux solaires à installer ?</h2>
                     </div>
@@ -563,35 +696,39 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/light-bulb.svg" alt="">
                                 <p>Je réfléchis à mes travaux</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/master.svg" alt="">
                                 <p>Je recherche un artisan RGE</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/paper.svg" alt="">
                                 <p>Je vais signer mon devis</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/leaflet.svg" alt="">
                                 <p>J’ai déjà signé mon devis</p>
                             </label>
                         </div>
                     </div>
                 </div>
-                <div id='step-18' class="question step-thirteen step-seventeen">
+                <div id='step-18' class="question step-three step-seventeen">
                     <div class='title'>
                         <h2>Où se situe le logement concerné par les travaux ?</h2>
                     </div>
@@ -613,21 +750,23 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/no.svg" alt="">
                                 <p>Non</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/yes.svg" alt="">
                                 <p>Oui</p>
                             </label>
                         </div>
                     </div>
                 </div>
-                <div id='step-20' class="question step-thirteen step-nineteen">
+                <div id='step-20' class="question step-three step-nineteen">
                     <div class='title'>
                         <h2>Quel est le code postal de votre résidence principale ?</h2>
                     </div>
@@ -657,33 +796,36 @@
                 <div id='step-22' class="question step-ten step-twenty-one">
                     <div class='title'>
                         <h2>Dans quelle tranche se situent les revenus fiscaux de votre foyer ?</h2>
-                        <h4>Il s’agit du revenu de l’ensemble des membres du foyer fiscal.</h4>
+                        <h5>Il s’agit du revenu de l’ensemble des membres du foyer fiscal.</h5>
                     </div>
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/hand-1.svg" alt="">
                                 <p>Inférieur à 21 760 €</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/hand-2.svg" alt="">
                                 <p>Inférieur à 21 760 €</p>
                             </label>
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="checkbox">
+                                <input type="radio">
+                                <span></span>
                                 <img src="images/hand-3.svg" alt="">
                                 <p>Supérieur à 27 896 €</p>
                             </label>
                         </div>
                     </div>
                 </div>
-                <div id='step-23' class="question step-thirteen step-twenty-two">
+                <div id='step-23' class="question step-three step-twenty-two">
                     <div class='title'>
                         <h2>Comment vous appelez-vous ?</h2>
                     </div>
@@ -710,10 +852,10 @@
                         </div>
                     </div>
                 </div>
-                <div id='step-24' class="question step-thirteen step-twenty-three">
+                <div id='step-24' class="question step-three step-twenty-three">
                     <div class='title'>
                         <h2>Quel est votre numéro de téléphone ?</h2>
-                        <h4>Il permettra à nos équipes de vous contacter pour finaliser votre projet.</h4>
+                        <h5>Il permettra à nos équipes de vous contacter pour finaliser votre projet.</h5>
                     </div>
                     <div class="answers">
                         <label>
@@ -722,10 +864,10 @@
                         </label>
                     </div>
                 </div>
-                <div id='step-25' class="question step-thirteen step-twenty-four">
+                <div id='step-25' class="question step-three step-twenty-four">
                     <div class='title'>
                         <h2>Quel est votre numéro de téléphone ?</h2>
-                        <h4>Il permettra à nos équipes de vous contacter pour finaliser votre projet.</h4>
+                        <h5>Il permettra à nos équipes de vous contacter pour finaliser votre projet.</h5>
                     </div>
                     <div class="answers">
                         <label>
@@ -743,29 +885,98 @@
                         </p>
                     </div>
                 </div>
-                <div id='step-26' class="question step-thirteen step-twenty-five">
-                    <!--                        <div class='title'>-->
-                    <!--                            <h2>Quel est votre numéro de téléphone ?</h2>-->
-                    <!--                            <h4>Il permettra à nos équipes de vous contacter pour finaliser votre projet.</h4>-->
-                    <!--                        </div>-->
-                    <!--                        <div class="answers">-->
-                    <!--                            <label>-->
-                    <!--                                Email-->
-                    <!--                                <input type="email">-->
-                    <!--                            </label>-->
-                    <!--                            <label>-->
-                    <!--                                Mot de passe (5 caractères minimum)-->
-                    <!--                                <input type="password">-->
-                    <!--                            </label>-->
-                    <!--                            <p>-->
-                    <!--                                En cliquant sur « Valider », vous acceptez les <a href='#'>Conditions Générales d'Utilisation</a> et vous reconnaissez avoir lu et accepté notre <a href='#'>Politique de Protection des Données</a>-->
-                    <!--                            </p>-->
-                    <!--                        </div>-->
+                <div id='step-26' class="question step-two step-twenty-five">
+                    <div class='confirm'>
+                        <div class='title'>
+                            <h1>Estimation de votre prime Effy : <span>231 €*</span></h1>
+                        </div>
+                        <div class='confirm-inner'>
+                            <h3>Pour obtenir votre prime, vous devez valider votre demande avec un conseiller Effy par téléphone (appel gratuit)</h3>
+                            <div class='confirm-btn'>
+                                <button class='btn' type='button'>JE VEUX OBTENIR MA PRIME</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='reviews'>
+                        <h2>Nos clients parlent de nous</h2>
+                        <div class='reviews-inner'>
+                            <div class='reviews-item'>
+                                <div class='item-rating'>
+                                    <div class='rating-icons'>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                    </div>
+                                    <div class='rating-data'>
+                                        <span>Le 13/01/2021</span>
+                                    </div>
+                                </div>
+                                <h3>Christian G.</h3>
+                                <p>
+                                    « Rien à dire, tout a été parfait ! On vous remercie Effy pour l'aide financière
+                                    apportée a nos travaux. Site très sérieux. Je recommande cet organisme. Merci encore ! »
+                                </p>
+                            </div>
+                            <div class='reviews-item'>
+                                <div class='item-rating'>
+                                    <div class='rating-icons'>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                    </div>
+                                    <div class='rating-data'>
+                                        <span>Le 13/01/2021</span>
+                                    </div>
+                                </div>
+                                <h3>Noël M.</h3>
+                                <p>
+                                    « Facilité déconcertante. Suite à la panne déclenchant un remplacement, nous avons
+                                    pu bénéficier de la prime effy. Inscription, docs et justif à fournir, tout est
+                                    indiqué, ainsi que la marche à suivre. Rien de plus simple. Merci aux concepteurs
+                                    du site. C'est on ne peut plus clair. »
+                                </p>
+                            </div>
+                            <div class='reviews-item'>
+                                <div class='item-rating'>
+                                    <div class='rating-icons'>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                        <img src='images/star.svg' alt=''>
+                                    </div>
+                                    <div class='rating-data'>
+                                        <span>Le 13/01/2021</span>
+                                    </div>
+                                </div>
+                                <h3>Virginie R.</h3>
+                                <p>
+                                    « Dossier monté suivant les instructions. Documents envoyés via l'application, et
+                                    tout fut bouclé 1 mois après. L'envoi du chèque a suivi.. PARFAIT !! 👍🏼 »
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='description'>
+                        <p>
+                            * La Prime Effy est proposée dans le cadre du dispositif des Certificats d’Economies
+                            d’Energie, et son montant est estimé sur la base de votre projet de travaux, des
+                            informations que vous avez renseignées lors de votre simulation sur notre site Internet,
+                            notamment le montant de vos revenus, et des règles applicables au dispositif à ce jour. Si
+                            votre projet de travaux évolue, la Prime Effy pourra également évoluer. Toute Prime Effy est
+                            soumise au respect des <a href='#'>Conditions Générales de la Prime</a> notamment aucune Prime Effy ne sera
+                            due pour tout devis signé avant aujourd’hui.
+                        </p>
+                    </div>
                 </div>
                 <div class="continue">
                     <div class="continue-inner">
                         <p>Ou presser ENTRÉE</p>
-                        <button id='next-btn' type="button">Continuer</button>
+                        <button class='btn' id='next-btn' type="button">Continuer</button>
                     </div>
                 </div>
             </form>
