@@ -24,7 +24,7 @@
         </div>
         <div class="parcours-form">
             <div class="form-progress">
-                <a href="#" class="return"><img src="images/return.svg" alt=""> Retour</a>
+                <a id='prev-btn' href="#" class="return"><img src="images/return.svg" alt=""> Retour</a>
                 <div class="progress-line"></div>
             </div>
             <form action="">
@@ -35,7 +35,7 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/house.svg" alt="">
                                 <p>Une maison</p>
@@ -43,7 +43,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/apartment.svg" alt="">
                                 <p>Un appartement</p>
@@ -58,7 +58,7 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/no.svg" alt="">
                                 <p>Non</p>
@@ -66,7 +66,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/yes.svg" alt="">
                                 <p>Oui</p>
@@ -183,7 +183,7 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/oil.svg" alt="">
                                 <p>Chauffage au Fioul</p>
@@ -191,7 +191,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/lightning.svg" alt="">
                                 <p>Chauffage Électrique</p>
@@ -199,7 +199,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/gas.svg" alt="">
                                 <p>Chauffage au Gaz</p>
@@ -207,7 +207,7 @@
                         </div>
                         <div class="answer">
                             <label for=>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/fire.svg" alt="">
                                 <p>Chauffage au Bois</p>
@@ -215,7 +215,7 @@
                         </div>
                         <div class="answer">
                             <label for=>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/pump.svg" alt="">
                                 <p>Pompe à Chaleur</p>
@@ -223,7 +223,7 @@
                         </div>
                         <div class="answer">
                             <label for=>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/coal.svg" alt="">
                                 <p>Chauffage au Charbon</p>
@@ -238,7 +238,7 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/oil-condensing-boiler.svg" alt="">
                                 <p>Chaudière à condensation</p>
@@ -246,7 +246,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/oil-boiler.svg" alt="">
                                 <p>Chaudière autre qu’à condensation</p>
@@ -254,7 +254,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/oil-plate.svg" alt="">
                                 <p>Poêle</p>
@@ -269,7 +269,7 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/electric-boiler.svg" alt="">
                                 <p>Chaudière électrique</p>
@@ -277,7 +277,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/heating.svg" alt="">
                                 <p>Plafonds ou planchers chauffants</p>
@@ -285,7 +285,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/electric-heaters.svg" alt="">
                                 <p>Radiateurs électriques</p>
@@ -300,7 +300,7 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/gas-condensing-boiler.svg" alt="">
                                 <p>Chaudière à condensation</p>
@@ -308,7 +308,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/gas-boiler.svg" alt="">
                                 <p>Chaudière autre qu’à condensation</p>
@@ -316,7 +316,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/gas-heater.svg" alt="">
                                 <p>Radiateur au gaz</p>
@@ -324,7 +324,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/gas-stove.svg" alt="">
                                 <p>Poêle au gaz</p>
@@ -341,7 +341,7 @@
                         <div class='answers-inner'>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/roof-insulation.svg" alt="">
                                     <p>Isolation des Combles</p>
@@ -349,7 +349,7 @@
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/wall-insulation.svg" alt="">
                                     <p>Isolations des Murs</p>
@@ -357,7 +357,7 @@
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/floor-insulation.svg" alt="">
                                     <p>Isolation du Sol</p>
@@ -365,7 +365,7 @@
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/windows.svg" alt="">
                                     <p>Fenêtres</p>
@@ -373,7 +373,7 @@
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/roof-terrace-insulation.svg" alt="">
                                     <p>Isolation d’une Toiture-Terrasse</p>
@@ -386,7 +386,7 @@
                         <div class='answers-inner'>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/heat-pump-1.svg" alt="">
                                     <p>Pompe à Chaleur Air/Eaus</p>
@@ -394,7 +394,7 @@
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/heat-pump-2.svg" alt="">
                                     <p>Pompe à Chaleur Géothermique</p>
@@ -402,7 +402,7 @@
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/heart-pump-3.svg" alt="">
                                     <p>Pompe à Chaleur Air/Air</p>
@@ -410,7 +410,7 @@
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/heart-pump-4.svg" alt="">
                                     <p>Pompe à Chaleur Hybride</p>
@@ -423,7 +423,7 @@
                         <div class='answers-inner'>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/oil-condensing-boiler.svg" alt="">
                                     <p>Chaudière fioul à condensation</p>
@@ -431,7 +431,7 @@
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/gas-condensing-boiler.svg" alt="">
                                     <p>Chaudière gaz à condensation</p>
@@ -439,7 +439,7 @@
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/electric-radiator.svg" alt="">
                                     <p>Radiateur électrique à régulation électronique</p>
@@ -452,7 +452,7 @@
                         <div class='answers-inner'>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/wood-boiler.svg" alt="">
                                     <p>Chaudière à bois</p>
@@ -460,7 +460,7 @@
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/fireplace-insert.svg" alt="">
                                     <p>Insert cheminée</p>
@@ -468,7 +468,7 @@
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/wood-stove.svg" alt="">
                                     <p>Poêle à bois (granulés ou bûches)</p>
@@ -481,7 +481,7 @@
                         <div class='answers-inner'>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/solar-panels.svg" alt="">
                                     <p>Panneaux Solaires Photovoltaïques</p>
@@ -489,7 +489,7 @@
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/solar-system.svg" alt="">
                                     <p>Système Solaire Combiné</p>
@@ -502,7 +502,7 @@
                         <div class='answers-inner'>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/water-heater.svg" alt="">
                                     <p>Chauffe-eau Thermodynamique</p>
@@ -510,7 +510,7 @@
                             </div>
                             <div class="answer">
                                 <label>
-                                    <input type="radio">
+                                    <input type="radio" name="radio">
                                     <span></span>
                                     <img src="images/solar-water-heater.svg" alt="">
                                     <p>Chauffe-eau Solaire Individuel</p>
@@ -526,7 +526,7 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/lost-attics.svg" alt="">
                                 <p>Des combles perdus</p>
@@ -534,7 +534,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/converted-attic.svg" alt="">
                                 <p>Des combles aménagés</p>
@@ -549,7 +549,7 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/internal-insulation.svg" alt="">
                                 <p>Isolation intérieure</p>
@@ -557,7 +557,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/external-insulation.svg" alt="">
                                 <p>Isolation extérieure</p>
@@ -565,7 +565,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/question-mark.svg" alt="">
                                 <p>Je ne sais pas</p>
@@ -580,7 +580,7 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/cave.svg" alt="">
                                 <p>Une cave</p>
@@ -588,7 +588,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/median.svg" alt="">
                                 <p>Un terre-plein</p>
@@ -596,7 +596,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/crawl-space.svg" alt="">
                                 <p>Un vide sanitaire</p>
@@ -604,7 +604,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/garage.svg" alt="">
                                 <p>Un garage</p>
@@ -646,7 +646,7 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/basse-température.svg" alt="">
                                 <p>Basse température</p>
@@ -654,7 +654,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/moyenne-température.svg" alt="">
                                 <p>Moyenne température</p>
@@ -662,7 +662,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/haute-température.svg" alt="">
                                 <p>Haute température</p>
@@ -670,7 +670,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/question-mark.svg" alt="">
                                 <p>Je ne sais pas</p>
@@ -696,7 +696,7 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/light-bulb.svg" alt="">
                                 <p>Je réfléchis à mes travaux</p>
@@ -704,7 +704,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/master.svg" alt="">
                                 <p>Je recherche un artisan RGE</p>
@@ -712,7 +712,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/paper.svg" alt="">
                                 <p>Je vais signer mon devis</p>
@@ -720,7 +720,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/leaflet.svg" alt="">
                                 <p>J’ai déjà signé mon devis</p>
@@ -750,7 +750,7 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/no.svg" alt="">
                                 <p>Non</p>
@@ -758,7 +758,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/yes.svg" alt="">
                                 <p>Oui</p>
@@ -801,7 +801,7 @@
                     <div class="answers">
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/hand-1.svg" alt="">
                                 <p>Inférieur à 21 760 €</p>
@@ -809,7 +809,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/hand-2.svg" alt="">
                                 <p>Inférieur à 21 760 €</p>
@@ -817,7 +817,7 @@
                         </div>
                         <div class="answer">
                             <label>
-                                <input type="radio">
+                                <input type="radio" name="radio">
                                 <span></span>
                                 <img src="images/hand-3.svg" alt="">
                                 <p>Supérieur à 27 896 €</p>
