@@ -197,8 +197,8 @@ document.addEventListener('DOMContentLoaded', function () {
               // go to step 15
               preCount = 14;
             } else if (this.getAttribute('data-name') === 'Pompe à Chaleur Air/Air') {
-              // go to step 17
-              preCount = 16;
+              // go to step 16
+              preCount = 15;
             } else if (this.getAttribute('data-name') === 'Radiateur électrique à régulation électronique') {
               // go to step 17
               preCount = 16;
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         console.log(count, count);
         historySteps.push(count);
-      }, 200);
+      }, 300);
     });
 
   }
