@@ -24,8 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     question[count].setAttribute('style', 'display:block !important');
 
     progressLine.style.width = `${count / question.length * 100}%`;
-
-    showButtons();
+    if (count !== 25 && count !== 2) showButtons();
   };
 
   const hideButtons = () => {
@@ -43,9 +42,26 @@ document.addEventListener('DOMContentLoaded', function () {
   // Show Next Step  on click button
   nextBtn.addEventListener('click', function () {
     if (count === 5) {
-      if (count < question.length - 1) count += 3;
+      count += 3;
+    } else if (count === 1) {
+      count += 1;
+      hideButtons();
     } else if (count === 8) {
       count = preCount;
+    } else if (count === 9) {
+      count += 4;
+    } else if (count === 11) {
+      count += 2;
+    } else if (count === 13) {
+      count += 2;
+    } else if (count === 15) {
+      count += 3;
+    } else if (count === 17) {
+      count -= 2;
+    } else if (count === 19) {
+      count += 2;
+    } else if (count === 25) {
+      hideButtons()
     } else {
       if (count < question.length - 1) count += 1;
     }
@@ -97,8 +113,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             break;
           case 2:
+            // not need
             break;
           case 3:
+            // not need
             break;
           case 4:
             if (this.getAttribute('data-name') === 'Chauffage Électrique') {
@@ -164,10 +182,16 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             break;
           case 9:
+            // go to step 14
+            count += 4;
+            goToStep(count);
             break;
           case 10:
             break;
           case 11:
+            // go to step 14
+            count += 2;
+            goToStep(count);
             break;
           case 12:
             break;
@@ -176,19 +200,29 @@ document.addEventListener('DOMContentLoaded', function () {
           case 14:
             break;
           case 15:
+            // go to step 19
+            count += 3;
+            goToStep(count);
             break;
           case 16:
             // go to step 19
             count += 2;
             break;
           case 17:
+            // not need
             break;
           case 18:
             break;
           case 19:
-            // go to step 20
-            count += 1;
-            goToStep(count);
+            if (this.getAttribute('data-name') === 'yes') {
+              // go to step 22
+              count += 2;
+              goToStep(count);
+            } else {
+              // go to step 21
+              count += 1;
+              goToStep(count);
+            }
             break;
           case 20:
             // go to step 21
@@ -196,9 +230,7 @@ document.addEventListener('DOMContentLoaded', function () {
             goToStep(count);
             break;
           case 21:
-            // go to step 22
-            count += 1;
-            goToStep(count);
+            // not need
             break;
           case 22:
             // go to step 23
@@ -206,11 +238,13 @@ document.addEventListener('DOMContentLoaded', function () {
             goToStep(count);
             break;
           case 23:
-            // go to step 24
-            count += 1;
-            goToStep(count);
+            // not need
             break;
           case 24:
+            // not need
+            break;
+          case 25:
+            // not need
             break;
         }
 
