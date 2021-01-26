@@ -24,6 +24,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     progressLine.style.width = `${count / question.length * 100}%`;
 
+    showButtons();
+  };
+
+  const hideButtons = () => {
+    progress.setAttribute('style', 'display:none !important');
+    continueBtn.setAttribute('style', 'display:none !important');
+  };
+  const showButtons = () => {
+    progress.setAttribute('style', 'display:block !important');
+    continueBtn.setAttribute('style', 'display:block !important');
   };
 
   // Show  Step 1 on load
@@ -31,9 +41,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Show Next Step  on click button
   nextBtn.addEventListener('click', function () {
-    if (count < question.length - 1) count += 1;
-
-
+    console.log(count);
+    // if (count === 5) {
+    //   if (count < question.length - 1) count += 3;
+    // } else  {
+      if (count < question.length - 1) count += 1;
+    // }
+    goToStep(count);
+    historySteps.push(count);
   });
   // Go to First Step  on click button
   goFirstStep.addEventListener('click', function () {
@@ -46,57 +61,164 @@ document.addEventListener('DOMContentLoaded', function () {
   prevBtn.addEventListener('click', function () {
     if (historySteps.length > 0) {
       if (historySteps.length > 1) {
-        count = historySteps[historySteps.length - 2];
-        goToStep(count);
+        goToStep(historySteps[historySteps.length - 2]);
         historySteps.pop();
       } else {
-        count = historySteps[historySteps.length - 1] - 1;
-        goToStep(count);
+        goToStep(historySteps[historySteps.length - 1] - 1);
       }
     }
+
   });
 
 
   // Go to next when click on input
   for (let i = 0; i < input.length; i++) {
     input[i].addEventListener('click', function () {
-      if (count < question.length - 1) count += 1;
+      // if (count < question.length - 1) count += 1;
 
-      const inputRadio = input[i].getAttribute('type');
-      if (inputRadio === 'radio') {
-        setTimeout(() => {
-          // Show current step
-          switch (count) {
-            case 2:
-              if (this.getAttribute('data-name') === 'yes') {
-                count += 1;
-                goToStep(count);
-              } else {
-                goToStep(count);
-              }
-              break;
-            case 5:
-              break;
-            default:
+      setTimeout(() => {
+        // Show current step
+        switch (count) {
+          case 0:
+            count += 1;
+            goToStep(count);
+            break;
+          case 1:
+            if (this.getAttribute('data-name') === 'yes') {
+              count += 2;
               goToStep(count);
-          }
+            } else {
+              count += 1;
+              goToStep(count);
+              hideButtons();
+            }
+            break;
+          case 2:
+            break;
+          case 3:
+            break;
+          case 4:
+            if (this.getAttribute('data-name') === 'Chauffage Électrique') {
+              // go to step 7
+              count += 2;
+              goToStep(count);
+            } else if (this.getAttribute('data-name') === 'Chauffage au Gaz') {
+              // go to step 8
+              count += 3;
+              goToStep(count);
+            } else if (this.getAttribute('data-name') === 'Chauffage au Bois') {
+              // go to step 9
+              count += 4;
+              goToStep(count);
+            } else {
+              count += 1;
+              goToStep(count);
+            }
+            break;
+          case 5:
+            // go to step 9
+            count += 3;
+            goToStep(count);
+            break;
+          case 6:
+            // go to step 9
+            count += 2;
+            goToStep(count);
+            break;
+          case 7:
+            // go to step 9
+            count += 1;
+            goToStep(count);
+            break;
+          case 8:
+            if (this.getAttribute('data-name') === 'Isolation des Combles') {
+              // go to step 10
+              count = 9;
+            } else if (this.getAttribute('data-name') === 'Isolations des Murs') {
+              // go to step 11
+              count = 10;
+            } else if (this.getAttribute('data-name') === 'Isolation du Sol') {
+              // go to step 12
+              count = 11;
+            } else if (this.getAttribute('data-name') === 'Fenêtres') {
+              // go to step 13
+              count = 12;
+            } else if (this.getAttribute('data-name') === 'Isolation d’une Toiture-Terrasse') {
+              // go to step 14
+              count = 13;
+            } else if (this.getAttribute('data-name') === 'Pompe à Chaleur Air/Eaus') {
+              // go to step 15
+              count = 14;
+            } else if (this.getAttribute('data-name') === 'Pompe à Chaleur Air/Air') {
+              // go to step 17
+              count = 16;
+            } else if (this.getAttribute('data-name') === 'Radiateur électrique à régulation électronique') {
+              // go to step 17
+              count = 16;
+            } else if (this.getAttribute('data-name') === 'Chauffe-eau Solaire Individuel') {
+              // go to step 18
+              count = 17;
+            }
+            break;
+          case 9:
+            break;
+          case 10:
+            break;
+          case 11:
+            break;
+          case 12:
+            break;
+          case 13:
+            break;
+          case 14:
+            break;
+          case 15:
+            break;
+          case 16:
+            // go to step 19
+            console.log('step19');
+            count += 2;
+            break;
+          case 17:
+            break;
+          case 18:
+            break;
+          case 19:
+            // go to step 20
+            count += 1;
+            goToStep(count);
+            break;
+          case 20:
+            // go to step 21
+            count += 1;
+            goToStep(count);
+            break;
+          case 21:
+            // go to step 22
+            count += 1;
+            goToStep(count);
+            break;
+          case 22:
+            // go to step 23
+            count += 1;
+            goToStep(count);
+            break;
+          case 23:
+            // go to step 24
+            count += 1;
+            goToStep(count);
+            break;
+          case 24:
+            break;
+        }
 
-          //  Hide progress bar adn button s on last step
-          if (count === question.length - 1) {
-            progress.setAttribute('style', 'display:none !important');
-            continueBtn.setAttribute('style', 'display:none !important');
-          } else {
-            progress.setAttribute('style', 'display:block !important');
-            continueBtn.setAttribute('style', 'display:block !important');
-          }
-
-          historySteps.push(count);
-
-        }, 200);
-      }
+        console.log(count, count);
+        historySteps.push(count);
+      }, 200);
     });
 
   }
+  console.log(count, 'count');
 
 
 });
