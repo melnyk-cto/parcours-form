@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const progressLine = document.getElementById("progress");
   const input = document.getElementsByTagName("input");
   const goFirstStep = document.getElementsByClassName("go-first-step")[0];
+  const sidebarStatus = document.getElementsByClassName("sidebar-status")[0];
   let count = 0;
   let preCount = 9;
   let historySteps = [];
@@ -41,12 +42,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Show Next Step  on click button
   nextBtn.addEventListener('click', function () {
+    console.log(count, 'count');
     if (count === 5) {
       count += 3;
     } else if (count === 1) {
-      count += 1;
+      count += 2;
       hideButtons();
     } else if (count === 8) {
+      // Progress Bar (Status)
+      sidebarStatus.children[0].classList.add('active');
+      sidebarStatus.children[0].classList.remove('first-step');
+      sidebarStatus.children[1].classList.add('first-step');
       count = preCount;
     } else if (count === 9) {
       count += 4;
@@ -59,9 +65,24 @@ document.addEventListener('DOMContentLoaded', function () {
     } else if (count === 17) {
       count -= 2;
     } else if (count === 19) {
+      // Progress Bar (Status)
+      sidebarStatus.children[0].classList.add('active');
+      sidebarStatus.children[0].classList.remove('first-step');
+      sidebarStatus.children[1].classList.add('active');
+      sidebarStatus.children[1].classList.remove('first-step');
+      sidebarStatus.children[2].classList.add('first-step');
       count += 2;
-    } else if (count === 25) {
-      hideButtons()
+    } else if (count === 24) {
+      count += 1;
+      // Progress Bar (Status)
+      sidebarStatus.children[0].classList.add('active');
+      sidebarStatus.children[0].classList.remove('first-step');
+      sidebarStatus.children[1].classList.add('active');
+      sidebarStatus.children[1].classList.remove('first-step');
+      sidebarStatus.children[2].classList.add('active');
+      sidebarStatus.children[2].classList.remove('first-step');
+      sidebarStatus.children[3].classList.add('first-step');
+      hideButtons();
     } else {
       if (count < question.length - 1) count += 1;
     }
@@ -152,6 +173,11 @@ document.addEventListener('DOMContentLoaded', function () {
             goToStep(count);
             break;
           case 8:
+            // Progress Bar (Status)
+            sidebarStatus.children[0].classList.add('active');
+            sidebarStatus.children[0].classList.remove('first-step');
+            sidebarStatus.children[1].classList.add('first-step');
+
             if (this.getAttribute('data-name') === 'Isolation des Combles') {
               // go to step 10
               preCount = 9;
@@ -214,6 +240,12 @@ document.addEventListener('DOMContentLoaded', function () {
           case 18:
             break;
           case 19:
+            // Progress Bar (Status)
+            sidebarStatus.children[0].classList.add('active');
+            sidebarStatus.children[0].classList.remove('first-step');
+            sidebarStatus.children[1].classList.add('active');
+            sidebarStatus.children[1].classList.remove('first-step');
+            sidebarStatus.children[2].classList.add('first-step');
             if (this.getAttribute('data-name') === 'yes') {
               // go to step 22
               count += 2;
