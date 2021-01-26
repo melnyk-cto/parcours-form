@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const input = document.getElementsByTagName("input");
   const goFirstStep = document.getElementsByClassName("go-first-step")[0];
   let count = 0;
+  let preCount = 9;
   let historySteps = [];
 
   const goToStep = (current) => {
@@ -41,14 +42,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Show Next Step  on click button
   nextBtn.addEventListener('click', function () {
-    console.log(count);
-    // if (count === 5) {
-    //   if (count < question.length - 1) count += 3;
-    // } else  {
+    if (count === 5) {
+      if (count < question.length - 1) count += 3;
+    } else if (count === 8) {
+      count = preCount;
+    } else {
       if (count < question.length - 1) count += 1;
-    // }
+    }
     goToStep(count);
     historySteps.push(count);
+    preCount = 9;
   });
   // Go to First Step  on click button
   goFirstStep.addEventListener('click', function () {
@@ -133,31 +136,31 @@ document.addEventListener('DOMContentLoaded', function () {
           case 8:
             if (this.getAttribute('data-name') === 'Isolation des Combles') {
               // go to step 10
-              count = 9;
+              preCount = 9;
             } else if (this.getAttribute('data-name') === 'Isolations des Murs') {
               // go to step 11
-              count = 10;
+              preCount = 10;
             } else if (this.getAttribute('data-name') === 'Isolation du Sol') {
               // go to step 12
-              count = 11;
+              preCount = 11;
             } else if (this.getAttribute('data-name') === 'Fenêtres') {
               // go to step 13
-              count = 12;
+              preCount = 12;
             } else if (this.getAttribute('data-name') === 'Isolation d’une Toiture-Terrasse') {
               // go to step 14
-              count = 13;
+              preCount = 13;
             } else if (this.getAttribute('data-name') === 'Pompe à Chaleur Air/Eaus') {
               // go to step 15
-              count = 14;
+              preCount = 14;
             } else if (this.getAttribute('data-name') === 'Pompe à Chaleur Air/Air') {
               // go to step 17
-              count = 16;
+              preCount = 16;
             } else if (this.getAttribute('data-name') === 'Radiateur électrique à régulation électronique') {
               // go to step 17
-              count = 16;
+              preCount = 16;
             } else if (this.getAttribute('data-name') === 'Chauffe-eau Solaire Individuel') {
               // go to step 18
-              count = 17;
+              preCount = 17;
             }
             break;
           case 9:
@@ -176,7 +179,6 @@ document.addEventListener('DOMContentLoaded', function () {
             break;
           case 16:
             // go to step 19
-            console.log('step19');
             count += 2;
             break;
           case 17:
@@ -218,7 +220,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
   }
-  console.log(count, 'count');
-
 
 });
