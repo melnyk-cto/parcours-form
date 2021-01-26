@@ -9,3 +9,5 @@ node_modules
 
 # IDE
 .idea
+main.css
+main.css.map

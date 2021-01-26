@@ -7,8 +7,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const continueBtn = document.getElementsByClassName("continue")[0];
     const progressLine = document.getElementById("progress");
     let count = 0;
+
     // Show  Step 1 on load
     question[count].setAttribute('style', 'display:block !important');
+
     // Show Next Step  on click button
     nextBtn.addEventListener('click', function () {
         if (count < question.length - 1) count += 1;

@@ -1,0 +1,32 @@
+@import "variables";
+
+.header {
+  min-height:       80px;
+  width:            100%;
+  display:          flex;
+  background-color: $whiteColor;
+  box-shadow:       0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  position:         fixed;
+  top:              0;
+  left:             0;
+  align-items:      center;
+  justify-content:  space-between;
+  z-index:          9;
+  padding:          10px;
+  img {
+    max-width: 170px;
+  }
+  p {
+    margin-bottom: 0;
+    font-size:     20px;
+    color:         $mainColor;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    p {
+      display: none;
+    }
+  }
+}
