@@ -284,7 +284,25 @@ document.addEventListener('DOMContentLoaded', function () {
         historySteps.push(count);
       }, 300);
     });
-
   }
 
+  // Counter Input
+  const changeNumber = () => {
+    const plusBtn = document.getElementsByClassName('plus');
+    const minusBtn = document.getElementsByClassName('minus');
+    let count = 1;
+    for (let i = 0; i < plusBtn.length; i++) {
+      plusBtn[i].addEventListener('click', function () {
+        count += 1;
+        this.parentElement.children[1].children[0].value = count;
+      });
+    }
+    for (let i = 0; i < minusBtn.length; i++) {
+      minusBtn[i].addEventListener('click', function () {
+        count -= 1;
+        this.parentElement.children[1].children[0].value = count;
+      });
+    }
+  }
+  changeNumber();
 });
