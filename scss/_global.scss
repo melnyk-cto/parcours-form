@@ -1,6 +1,8 @@
+@import "variables";
+
 @media (any-hover: hover) {
   .btn:hover {
-    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, .25);
+    background: #10a2ae;
   }
 }
 
@@ -15,16 +17,12 @@
   font-family:     "Gilroy", sans-serif;
 }
 
-//html, body, main, .parcours {
-//    height: 100%;
-//}
-
 body {
   background: #f2f4f6;
 }
 
 a {
-  color:           #00a8a5;
+  color:           $mainColor;
   font-weight:     700;
   text-decoration: none;
 }
@@ -36,8 +34,8 @@ input {
   border-radius: 2px;
   padding:       12px;
   &:focus {
-    border:     1px solid #00a8a5;
-    box-shadow: 0 0 2px 1px #00a8a5;
+    border:     1px solid $mainColor;
+    box-shadow: 0 0 2px 1px $mainColor;
   }
 }
 
@@ -103,7 +101,7 @@ img {
 
 .btn {
   padding:        0 35px;
-  background:     linear-gradient(86deg, #00a8a5 23%, #4dd8a6 75%, #74f0a7 110%);
+  background:     $mainColor;
   color:          #fff;
   min-width:      172px;
   text-transform: uppercase;
