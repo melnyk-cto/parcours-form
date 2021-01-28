@@ -2,7 +2,10 @@
 
 @media (any-hover: hover) {
   .btn:hover {
-    background: #10a2ae;
+    background: $secondaryColor;
+  }
+  .btn.primary-btn:hover {
+    background: $mainColor;
   }
 }
 
@@ -117,6 +120,9 @@ img {
   }
   &:active {
     opacity: .7;
+  }
+  &.primary-btn {
+    background: $secondaryColor;
   }
 }
 
