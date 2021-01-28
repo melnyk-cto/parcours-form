@@ -60,17 +60,17 @@
           transform:     translate(-50%, 0);
         }
         &.active {
-          border-left: 1px solid $mainColor;
+          border-left: 1px solid $secondaryColor;
           color:       #003250;
           &::before {
-            background: $mainColor;
+            background: $secondaryColor;
           }
         }
         &.first-step {
           color: #003250;
           &::before {
-            border:     3px solid $mainColor;
-            background: #fff;
+            border:     3px solid $secondaryColor;
+            background: $whiteColor;
             width:      7px;
             height:     7px;
           }
@@ -197,7 +197,7 @@
       max-width: 800px;
       margin:    0 auto;
       .title {
-        background:    #153250;
+        background:    $secondaryColor;
         border-radius: 8px 8px 0 0;
         padding:       25px 15px;
         position:      relative;
@@ -219,7 +219,7 @@
           display:        inline-block;
           width:          0;
           height:         0;
-          border-top:     18px solid #153250;
+          border-top:     18px solid $secondaryColor;
           border-left:    16px solid transparent;
           border-right:   16px solid transparent;
           cursor:         pointer;
