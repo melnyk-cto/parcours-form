@@ -12,10 +12,10 @@
 .parcours {
   display: flex;
   &-sidebar {
+    background: $mainColor;
     max-width:  280px;
     width:      100%;
     padding:    20px;
-    background: #fff;
     position:   fixed;
     height:     100vh;
     .sidebar-title {
