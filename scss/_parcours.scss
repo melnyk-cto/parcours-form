@@ -119,13 +119,13 @@
       margin:     0 auto;
       height:     2px;
       background: #fff;
-      position: relative;
+      position:   relative;
       span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background:     $mainColor;
-        height: 2px;
+        position:   absolute;
+        top:        0;
+        left:       0;
+        background: $mainColor;
+        height:     2px;
       }
     }
   }
@@ -402,7 +402,7 @@
     }
     &.step-twelve {
       .answers {
-        max-width: 240px;
+        max-width:   240px;
         align-items: center;
         img {
           width:  30px;
@@ -410,46 +410,46 @@
         }
       }
       input {
-        width: 170px;
-        margin: 0 1rem;
-        text-align: center;
-        font-size: 16px;
+        width:       170px;
+        margin:      0 1rem;
+        text-align:  center;
+        font-size:   16px;
         font-weight: 600;
-        padding: 10px 12px;
+        padding:     10px 12px;
       }
       button {
-        min-width: 30px;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        border: 2px solid $mainColor;
-        color: $mainColor;
-        display: flex;
-        font-size: 50px;
-        font-weight: 400;
+        min-width:       30px;
+        width:           30px;
+        height:          30px;
+        border-radius:   50%;
+        border:          2px solid $mainColor;
+        color:           $mainColor;
+        display:         flex;
+        font-size:       50px;
+        font-weight:     400;
         justify-content: center;
-        align-items: center;
-        padding: 10px;
-        position: relative;
-        cursor: pointer;
+        align-items:     center;
+        padding:         10px;
+        position:        relative;
+        cursor:          pointer;
         &:after, &:before {
-          content: "";
-          position: absolute;
-          background:$mainColor;
+          content:    "";
+          position:   absolute;
+          background: $mainColor;
         }
         &:after {
-          top: 50%;
-          left: 4px;
-          width: 18px;
-          height: 2px;
+          top:       50%;
+          left:      4px;
+          width:     18px;
+          height:    2px;
           transform: translate(0, -50%);
         }
         &.plus:before {
-          top: 4px;
-          left: 50%;
+          top:       4px;
+          left:      50%;
           transform: translate(-50%, 0);
-          width: 2px;
-          height: 18px;
+          width:     2px;
+          height:    18px;
         }
       }
     }
@@ -488,7 +488,7 @@
             }
           }
           input {
-            display: none;
+            display:      none;
             margin-right: 10px;
             &:focus {
               border:     none;
@@ -497,8 +497,8 @@
             &:checked + span {
               color: $mainColor;
               &:after {
-                border: 1px solid $mainColor;
-                box-shadow: 0 3px 7px 1px rgba(42,42,42,.1);
+                border:     1px solid $mainColor;
+                box-shadow: 0 3px 7px 1px rgba(42, 42, 42, .1);
               }
               &:before {
                 display: block;
@@ -506,31 +506,31 @@
             }
           }
           span {
-            font-weight: 500;
+            font-weight:  500;
             padding-left: 26px;
-            position: relative;
-            color: #888;
+            position:     relative;
+            color:        #888;
             &:after, &:before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
+              content:       "";
+              position:      absolute;
+              top:           0;
+              left:          0;
               border-radius: 50%;
-              background: #fff;
+              background:    #fff;
             }
             &:after {
-              width: 14px;
+              width:  14px;
               height: 14px;
               border: 1px solid #bdc0c7;
             }
             &:before {
               background: $mainColor;
-              width: 10px;
-              height: 10px;
-              z-index: 3;
-              top: 3px;
-              left: 3px;
-              display: none;
+              width:      10px;
+              height:     10px;
+              z-index:    3;
+              top:        3px;
+              left:       3px;
+              display:    none;
             }
           }
         }
@@ -605,11 +605,11 @@
     }
   }
   .continue {
-    position:        fixed;
-    left:            280px;
-    bottom:          0;
-    right:           0;
-    background:      #f2f4f6;
+    position:   fixed;
+    left:       280px;
+    bottom:     0;
+    right:      0;
+    background: #f2f4f6;
     &-inner {
       display:         flex;
       justify-content: flex-end;
