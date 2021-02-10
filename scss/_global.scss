@@ -126,6 +126,61 @@ img {
   }
 }
 
+#continuer {
+  display: none;
+}
+
+// CF7
+.wpcf7 {
+  width: 100%;
+  .wpcf7-form-control-wrap {
+    width: 100%;
+    *:after, *:before {
+      display: none;
+    }
+    &:after, &:before {
+      display: none;
+    }
+  }
+  .wpcf7-list-item-label {
+    font-size: 0;
+    position: static !important;
+  }
+  #step-24 {
+    .step-twenty-two-buttons {
+      .step-24 {
+        padding: 0;
+        width: 0;
+      }
+      span:before {
+        left: -23px;
+      }
+    }
+  }
+  .screen-reader-response {
+    p {
+      text-align: center;
+      color: green;
+      font-weight: 700;
+    }
+  }
+  .wpcf7-response-output {
+    display: none;
+  }
+  .submission_id{
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    max-width: 105px;
+    font-size: 34px;
+    line-height: 1.94;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
 @media screen and (max-width: 992px) {
   .title {
     margin-bottom: 5px;

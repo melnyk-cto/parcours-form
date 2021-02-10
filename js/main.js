@@ -2,8 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const question = document.getElementsByClassName('question');
     const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
+    const nextBtn = document.getElementsByClassName('next-btn');
     const progress = document.getElementsByClassName("form-progress")[0];
+    const submitBtn = document.getElementById("continuer");
     const continueBtn = document.getElementsByClassName("continue")[0];
     const progressLine = document.getElementById("progress");
     const input = document.getElementsByTagName("input");
@@ -41,55 +42,52 @@ document.addEventListener('DOMContentLoaded', function () {
     question[count].setAttribute('style', 'display:block !important');
 
     // Show Next Step  on click button
-    nextBtn.addEventListener('click', function () {
-        console.log(count, 'count');
-        if (count === 5) {
-            count += 3;
-        } else if (count === 1) {
-            count += 2;
-            hideButtons();
-        } else if (count === 8) {
-            // Progress Bar (Status)
-            sidebarStatus.children[0].classList.add('active');
-            sidebarStatus.children[0].classList.remove('first-step');
-            sidebarStatus.children[1].classList.add('first-step');
-            count = preCount;
-        } else if (count === 9) {
-            count += 4;
-        } else if (count === 11) {
-            count += 2;
-        } else if (count === 13) {
-            count += 2;
-        } else if (count === 15) {
-            count += 3;
-        } else if (count === 17) {
-            count -= 2;
-        } else if (count === 19) {
-            // Progress Bar (Status)
-            sidebarStatus.children[0].classList.add('active');
-            sidebarStatus.children[0].classList.remove('first-step');
-            sidebarStatus.children[1].classList.add('active');
-            sidebarStatus.children[1].classList.remove('first-step');
-            sidebarStatus.children[2].classList.add('first-step');
-            count += 2;
-        } else if (count === 24) {
-            count += 1;
-            // Progress Bar (Status)
-            sidebarStatus.children[0].classList.add('active');
-            sidebarStatus.children[0].classList.remove('first-step');
-            sidebarStatus.children[1].classList.add('active');
-            sidebarStatus.children[1].classList.remove('first-step');
-            sidebarStatus.children[2].classList.add('active');
-            sidebarStatus.children[2].classList.remove('first-step');
-            sidebarStatus.children[3].classList.add('first-step');
-            hideButtons();
-        } else {
-            if (count < question.length - 1) count += 1;
-        }
-        goToStep(count);
-        historySteps.push(count);
-        preCount = 9;
-    });
+    for (let i = 0; i < nextBtn.length; i++) {
+        nextBtn[i].addEventListener('click', function () {
+            console.log(count, 'count');
+            if (count === 1) {
+                count += 2;
+                hideButtons();
+            } else if (count === 5) {
+                count += 3;
+            } else if (count === 8) {
+                // Progress Bar (Status)
+                sidebarStatus.children[0].classList.add('active');
+                sidebarStatus.children[0].classList.remove('first-step');
+                sidebarStatus.children[1].classList.add('first-step');
+                count = preCount;
+            } else if (count === 9) {
+                count += 4;
+            } else if (count === 11) {
+                count += 2;
+            } else if (count === 13) {
+                count += 2;
+            } else if (count === 15) {
+                count += 3;
+            } else if (count === 17) {
+                count -= 2;
+            } else if (count === 19) {
+                // Progress Bar (Status)
+                sidebarStatus.children[0].classList.add('active');
+                sidebarStatus.children[0].classList.remove('first-step');
+                sidebarStatus.children[1].classList.add('active');
+                sidebarStatus.children[1].classList.remove('first-stesp');
+                sidebarStatus.children[2].classList.add('first-step');
+                count += 2;
+            } else if (count === 23) {
+                console.log(nextBtn, 'nextBtn')
+                count += 1;
+                submitBtn.setAttribute('style', 'display:block !important');
+                nextBtn[1].setAttribute('style', 'display:none !important');
+            } else {
+                if (count < question.length - 1) count += 1;
+            }
+            goToStep(count);
+            historySteps.push(count);
+            preCount = 9;
+        });
+    }
+
     // Go to First Step  on click button
     goFirstStep.addEventListener('click', function () {
         goToStep(0);
@@ -99,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Show Prev Step  on click button
     prevBtn.addEventListener('click', function () {
+        console.log(count, 'count')
         if (historySteps.length > 0) {
             if (historySteps.length > 1) {
                 goToStep(historySteps[historySteps.length - 2]);
@@ -106,183 +105,186 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 goToStep(historySteps[historySteps.length - 1] - 1);
             }
+            if (count === 23) {
+                submitBtn.setAttribute('style', 'display:none !important');
+                nextBtn[1].setAttribute('style', 'display:block !important');
+            }
         }
 
     });
 
-
     // Go to next when click on input
     for (let i = 0; i < input.length; i++) {
         input[i].addEventListener('click', function () {
-            // if (count < question.length - 1) count += 1;
-
-            setTimeout(() => {
-                // Show current step
-                switch (count) {
-                    case 0:
-                        count += 1;
-                        goToStep(count);
-                        break;
-                    case 1:
-                        if (this.getAttribute('data-name') === 'yes') {
-                            count += 2;
-                            goToStep(count);
-                        } else {
+            if (input[i].getAttribute('type') === 'radio') {
+                setTimeout(() => {
+                    // Show current step
+                    switch (count) {
+                        case 0:
                             count += 1;
                             goToStep(count);
-                            hideButtons();
-                        }
-                        break;
-                    case 2:
-                        // not need
-                        break;
-                    case 3:
-                        // not need
-                        break;
-                    case 4:
-                        if (this.getAttribute('data-name') === 'Chauffage Électrique') {
-                            // go to step 7
-                            count += 2;
-                            goToStep(count);
-                        } else if (this.getAttribute('data-name') === 'Chauffage au Gaz') {
-                            // go to step 8
+                            break;
+                        case 1:
+                            if (this.value === 'Oui') {
+                                count += 2;
+                                goToStep(count);
+                            } else {
+                                count += 1;
+                                goToStep(count);
+                                hideButtons();
+                            }
+                            break;
+                        case 2:
+                            // not need
+                            break;
+                        case 3:
+                            // not need
+                            break;
+                        case 4:
+                            if (this.value === 'Chauffage Électrique') {
+                                // go to step 7
+                                count += 2;
+                                goToStep(count);
+                            } else if (this.value === 'Chauffage au Gaz') {
+                                // go to step 8
+                                count += 3;
+                                goToStep(count);
+                            } else if (this.value === 'Chauffage au Bois' || this.value === 'Pompe à Chaleur' || this.value === 'Chauffage au Charbon') {
+                                // go to step 9
+                                count += 4;
+                                goToStep(count);
+                            } else {
+                                count += 1;
+                                goToStep(count);
+                            }
+                            break;
+                        case 5:
+                            // go to step 9
                             count += 3;
                             goToStep(count);
-                        } else if (this.getAttribute('data-name') === 'Chauffage au Bois') {
+                            break;
+                        case 6:
                             // go to step 9
-                            count += 4;
-                            goToStep(count);
-                        } else {
-                            count += 1;
-                            goToStep(count);
-                        }
-                        break;
-                    case 5:
-                        // go to step 9
-                        count += 3;
-                        goToStep(count);
-                        break;
-                    case 6:
-                        // go to step 9
-                        count += 2;
-                        goToStep(count);
-                        break;
-                    case 7:
-                        // go to step 9
-                        count += 1;
-                        goToStep(count);
-                        break;
-                    case 8:
-                        // Progress Bar (Status)
-                        sidebarStatus.children[0].classList.add('active');
-                        sidebarStatus.children[0].classList.remove('first-step');
-                        sidebarStatus.children[1].classList.add('first-step');
-
-                        if (this.getAttribute('data-name') === 'Isolation des Combles') {
-                            // go to step 10
-                            preCount = 9;
-                        } else if (this.getAttribute('data-name') === 'Isolations des Murs') {
-                            // go to step 11
-                            preCount = 10;
-                        } else if (this.getAttribute('data-name') === 'Isolation du Sol') {
-                            // go to step 12
-                            preCount = 11;
-                        } else if (this.getAttribute('data-name') === 'Fenêtres') {
-                            // go to step 13
-                            preCount = 12;
-                        } else if (this.getAttribute('data-name') === 'Isolation d’une Toiture-Terrasse') {
-                            // go to step 14
-                            preCount = 13;
-                        } else if (this.getAttribute('data-name') === 'Pompe à Chaleur Air/Eaus') {
-                            // go to step 15
-                            preCount = 14;
-                        } else if (this.getAttribute('data-name') === 'Pompe à Chaleur Air/Air') {
-                            // go to step 16
-                            preCount = 15;
-                        } else if (this.getAttribute('data-name') === 'Radiateur électrique à régulation électronique') {
-                            // go to step 17
-                            preCount = 16;
-                        } else if (this.getAttribute('data-name') === 'Chauffe-eau Solaire Individuel') {
-                            // go to step 18
-                            preCount = 17;
-                        }
-                        break;
-                    case 9:
-                        // go to step 14
-                        count += 4;
-                        goToStep(count);
-                        break;
-                    case 10:
-                        break;
-                    case 11:
-                        // go to step 14
-                        count += 2;
-                        goToStep(count);
-                        break;
-                    case 12:
-                        break;
-                    case 13:
-                        break;
-                    case 14:
-                        break;
-                    case 15:
-                        // go to step 19
-                        count += 3;
-                        goToStep(count);
-                        break;
-                    case 16:
-                        // go to step 19
-                        count += 2;
-                        break;
-                    case 17:
-                        // not need
-                        break;
-                    case 18:
-                        break;
-                    case 19:
-                        // Progress Bar (Status)
-                        sidebarStatus.children[0].classList.add('active');
-                        sidebarStatus.children[0].classList.remove('first-step');
-                        sidebarStatus.children[1].classList.add('active');
-                        sidebarStatus.children[1].classList.remove('first-step');
-                        sidebarStatus.children[2].classList.add('first-step');
-                        if (this.getAttribute('data-name') === 'yes') {
-                            // go to step 22
                             count += 2;
                             goToStep(count);
-                        } else {
+                            break;
+                        case 7:
+                            // go to step 9
+                            count += 1;
+                            goToStep(count);
+                            break;
+                        case 8:
+                            // Progress Bar (Status)
+                            sidebarStatus.children[0].classList.add('active');
+                            sidebarStatus.children[0].classList.remove('first-step');
+                            sidebarStatus.children[1].classList.add('first-step');
+
+                            if (this.value === 'Isolation des Combles') {
+                                // go to step 10
+                                preCount = 9;
+                            } else if (this.value === 'Isolations des Murs') {
+                                // go to step 11
+                                preCount = 10;
+                            } else if (this.value === 'Isolation du Sol') {
+                                // go to step 12
+                                preCount = 11;
+                            } else if (this.value === 'Fenêtres') {
+                                // go to step 13
+                                preCount = 12;
+                            } else if (this.value === 'Isolation d’une Toiture-Terrasse') {
+                                // go to step 14
+                                preCount = 13;
+                            } else if (this.value === 'Pompe à Chaleur Air/Eaus' || this.value === 'Pompe à Chaleur Géothermique' || this.value === 'Pompe à Chaleur Hybride') {
+                                // go to step 15
+                                preCount = 14;
+                            } else if (this.value === 'Pompe à Chaleur Air/Air' || this.value === 'Chaudière fioul à condensation' || this.value === 'Chaudière gaz à condensation' || this.value === 'Chaudière à bois' || this.value === 'Insert cheminée' || this.value === 'Poêle à bois (granulés ou bûches)' || this.value === 'Panneaux Solaires Photovoltaïques' || this.value === 'Système Solaire Combiné' || this.value === 'Chauffe-eau Thermodynamique') {
+                                // go to step 16
+                                preCount = 15;
+                            } else if (this.value === 'Radiateur électrique à régulation électronique') {
+                                // go to step 17
+                                preCount = 16;
+                            } else if (this.value === 'Chauffe-eau Solaire Individuel') {
+                                // go to step 18
+                                preCount = 17;
+                            }
+                            break;
+                        case 9:
+                            // go to step 14
+                            count += 4;
+                            goToStep(count);
+                            break;
+                        case 10:
+                            break;
+                        case 11:
+                            // go to step 14
+                            count += 2;
+                            goToStep(count);
+                            break;
+                        case 12:
+                            break;
+                        case 13:
+                            break;
+                        case 14:
+                            break;
+                        case 15:
+                            // go to step 19
+                            count += 3;
+                            goToStep(count);
+                            break;
+                        case 16:
+                            // go to step 19
+                            count += 2;
+                            break;
+                        case 17:
+                            // not need
+                            break;
+                        case 18:
+                            break;
+                        case 19:
+                            // Progress Bar (Status)
+                            sidebarStatus.children[0].classList.add('active');
+                            sidebarStatus.children[0].classList.remove('first-step');
+                            sidebarStatus.children[1].classList.add('active');
+                            sidebarStatus.children[1].classList.remove('first-step');
+                            sidebarStatus.children[2].classList.add('first-step');
+                            if (this.value === 'Oui') {
+                                // go to step 22
+                                count += 2;
+                                goToStep(count);
+                            } else {
+                                // go to step 21
+                                count += 1;
+                                goToStep(count);
+                            }
+                            break;
+                        case 20:
                             // go to step 21
                             count += 1;
                             goToStep(count);
-                        }
-                        break;
-                    case 20:
-                        // go to step 21
-                        count += 1;
-                        goToStep(count);
-                        break;
-                    case 21:
-                        // not need
-                        break;
-                    case 22:
-                        // go to step 23
-                        count += 1;
-                        goToStep(count);
-                        break;
-                    case 23:
-                        // not need
-                        break;
-                    case 24:
-                        // not need
-                        break;
-                    case 25:
-                        // not need
-                        break;
-                }
+                            break;
+                        case 21:
+                            // not need
+                            break;
+                        case 22:
+                            // go to step 23
+                            count += 1;
+                            goToStep(count);
+                            break;
+                        case 23:
+                            // not need
+                            break;
+                        case 24:
+                            // not need
+                            break;
+                        case 25:
+                            // not need
+                            break;
+                    }
 
-                console.log(count, count);
-                historySteps.push(count);
-            }, 300);
+                    console.log(count, count);
+                    historySteps.push(count);
+                }, 300);
+            }
         });
     }
 
@@ -416,4 +418,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     };
     ChangeStep23();
+
+    // Show Success Step
+    if (window.location.hash === '#wpcf7-f4294-o1') {
+        // Progress Bar (Status)
+        sidebarStatus.children[0].classList.add('active');
+        sidebarStatus.children[0].classList.remove('first-step');
+        sidebarStatus.children[1].classList.add('active');
+        sidebarStatus.children[1].classList.remove('first-step');
+        sidebarStatus.children[2].classList.add('active');
+        sidebarStatus.children[2].classList.remove('first-step');
+        sidebarStatus.children[3].classList.add('first-step');
+        submitBtn.setAttribute('style', 'display:none !important');
+        hideButtons();
+        goToStep(25);
+    }
+
 });
